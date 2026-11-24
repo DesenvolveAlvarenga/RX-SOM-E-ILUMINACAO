@@ -90,6 +90,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  flex: none;
 }
 .header__icon-btn {
   width: 48px;
@@ -155,7 +156,7 @@
 
 @media (max-width: 900px) {
   .header__nav,
-  .header__cta {
+  .header__actions .header__cta {
     display: none;
   }
   .header__burger {
