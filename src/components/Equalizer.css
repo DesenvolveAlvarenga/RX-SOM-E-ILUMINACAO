@@ -1,0 +1,30 @@
+.eq {
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.eq__col {
+  display: flex;
+  flex-direction: column-reverse;
+  animation: eq 1.4s ease-in-out infinite alternate;
+}
+.eq__sq {
+  display: block;
+  border-radius: 2px;
+}
+
+.eq--lg { gap: 6px; height: 150px; }
+.eq--lg .eq__col { gap: 6px; }
+.eq--lg .eq__sq { width: 22px; height: 18px; }
+
+.eq--md { gap: 6px; height: 110px; }
+.eq--md .eq__col { gap: 5px; }
+.eq--md .eq__sq { width: 18px; height: 13px; }
+
+.eq--sm { gap: 4px; height: 70px; }
+.eq--sm .eq__col { gap: 4px; }
+.eq--sm .eq__sq { width: 14px; height: 10px; border-radius: 1px; }
+
+.eq--xs { gap: 4px; height: 60px; }
+.eq--xs .eq__col { gap: 4px; }
+.eq--xs .eq__sq { width: 11px; height: 8px; border-radius: 1px; }

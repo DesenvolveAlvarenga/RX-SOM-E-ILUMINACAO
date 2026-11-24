@@ -1,0 +1,152 @@
+.about {
+  padding-top: 140px;
+}
+.about__grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 72px;
+}
+.about__media {
+  flex: 1 1 480px;
+  position: relative;
+  min-height: 600px;
+}
+.about__photo {
+  position: absolute !important;
+  border-radius: 22px;
+}
+.about__photo--main {
+  left: 0;
+  top: 0;
+  width: 74%;
+  height: 470px;
+}
+.about__photo--small {
+  right: 0;
+  bottom: 0;
+  width: 56%;
+  height: 330px;
+  border: 6px solid var(--bg);
+}
+.about__blocks {
+  position: absolute;
+  left: 30px;
+  bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 16px);
+  gap: 6px;
+  z-index: 3;
+}
+.about__blocks span {
+  height: 16px;
+}
+.about__text {
+  flex: 1 1 460px;
+}
+.about__title {
+  margin-bottom: 28px;
+}
+.about__p {
+  margin: 0 0 18px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-2);
+  font-weight: 300;
+}
+.about__p:last-of-type {
+  margin-bottom: 40px;
+}
+.about__pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.about__pillar {
+  flex: 1 1 150px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel);
+}
+.about__pillar-n {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 32px;
+  color: var(--accent-text);
+}
+.about__pillar-t {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 6px 0;
+}
+.about__pillar-d {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-3);
+}
+
+@media (max-width: 767px) {
+  .about {
+    padding-top: 80px;
+  }
+  .about__grid {
+    gap: 0;
+  }
+  /* no mobile o título vem antes das fotos */
+  .about__text {
+    display: contents;
+  }
+  .about__text > .reveal:first-child {
+    order: -1;
+    width: 100%;
+  }
+  .about__title {
+    margin-bottom: 20px;
+  }
+  .about__media {
+    flex-basis: 100%;
+    min-height: 300px;
+    margin-bottom: 28px;
+  }
+  .about__photo--main {
+    width: 76%;
+    height: 230px;
+    border-radius: 18px;
+  }
+  .about__photo--small {
+    width: 54%;
+    height: 160px;
+    border-width: 5px;
+    border-radius: 18px;
+  }
+  .about__blocks {
+    display: none;
+  }
+  .about__p {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .about__p:last-of-type {
+    margin-bottom: 26px;
+  }
+  .about__pillars {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .about__pillar {
+    flex: none;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 16px 18px;
+    border-radius: 14px;
+  }
+  .about__pillar-n {
+    font-size: 26px;
+  }
+  .about__pillar-t {
+    margin: 0;
+  }
+}

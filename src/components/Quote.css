@@ -1,0 +1,190 @@
+.quote__panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  border: 1px solid rgba(253, 203, 8, 0.45);
+  background: radial-gradient(ellipse 60% 80% at 0% 0%, rgba(253, 203, 8, 0.16), transparent 60%), var(--panel);
+  padding: clamp(32px, 5vw, 72px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+.quote__stripe {
+  top: -40px;
+  height: 200px;
+}
+.quote__stripe--gold {
+  right: 80px;
+  width: 30px;
+  background: var(--gold);
+}
+.quote__stripe--yellow {
+  right: 40px;
+  width: 12px;
+  background: var(--yellow);
+}
+.quote__intro {
+  flex: 1 1 380px;
+  position: relative;
+}
+.quote__title {
+  margin: 0 0 24px;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(48px, 5.6vw, 84px);
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+.quote__lead {
+  margin: 0 0 40px;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text-2);
+  font-weight: 300;
+  max-width: 460px;
+}
+.quote__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.quote__contact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text);
+}
+.quote__contact:hover {
+  color: var(--text);
+}
+.quote__contact-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  border: 1px solid var(--line-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-text);
+  transition: border-color 0.2s;
+}
+a.quote__contact:hover .quote__contact-icon {
+  border-color: var(--gold);
+}
+.quote__contact small {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-4);
+}
+.quote__contact strong {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.quote__form {
+  flex: 1 1 460px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-content: start;
+}
+.quote__full {
+  grid-column: span 2;
+}
+.quote__needs {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.quote__needs legend {
+  margin-bottom: 10px;
+  padding: 0;
+}
+.quote__needs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.quote__need {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.quote__need.is-on {
+  border-color: var(--gold);
+  background: rgba(253, 203, 8, 0.08);
+}
+.quote__need input {
+  width: 18px;
+  height: 18px;
+  accent-color: #fdcb08;
+  margin: 0;
+}
+.quote__submit {
+  min-height: 60px;
+  border-radius: 14px;
+  font-size: 16px;
+}
+.quote__status {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+@media (max-width: 767px) {
+  .quote .container {
+    padding: 0 16px;
+  }
+  .quote__panel {
+    border-radius: 24px;
+    padding: 30px 20px;
+    gap: 24px;
+    background: radial-gradient(ellipse 90% 60% at 0% 0%, rgba(253, 203, 8, 0.16), transparent 60%), var(--panel);
+  }
+  .quote__stripe {
+    top: -20px;
+    height: 110px;
+  }
+  .quote__stripe--gold {
+    right: 30px;
+    width: 18px;
+  }
+  .quote__stripe--yellow {
+    display: none;
+  }
+  .quote__title {
+    font-size: 48px;
+    margin-bottom: 14px;
+  }
+  .quote__lead {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .quote__contacts {
+    display: none;
+  }
+  .quote__form {
+    gap: 14px 10px;
+  }
+  .quote__form > .field:nth-of-type(2),
+  .quote__form > .field:nth-of-type(5) {
+    grid-column: span 2;
+  }
+  .field {
+    font-size: 12px;
+  }
+  .quote__submit {
+    min-height: 58px;
+    font-size: 15px;
+  }
+}

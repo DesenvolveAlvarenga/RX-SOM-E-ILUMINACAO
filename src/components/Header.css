@@ -1,0 +1,201 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--header-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--header-border);
+  transition: background-color 0.35s, box-shadow 0.35s;
+}
+.header.is-scrolled {
+  box-shadow: 0 12px 30px -20px rgba(0, 0, 0, 0.5);
+}
+
+.header__bar {
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Logo: no escuro fica numa placa marfim (o arquivo original tem fundo branco
+   e o "RX" é preto); no claro aparece direto, sem alteração. */
+.header__logo {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f4ec;
+  padding: 10px 18px 12px;
+  border-radius: 0 0 14px 14px;
+  border-bottom: 3px solid var(--gold);
+  box-shadow: 0 18px 40px -18px rgba(253, 203, 8, 0.55);
+  transition: background-color 0.35s, padding 0.35s, box-shadow 0.35s;
+}
+.header__logo img {
+  height: 74px;
+  width: auto;
+}
+[data-theme='light'] .header__logo {
+  align-self: center;
+  background: transparent;
+  padding: 4px 0;
+  border-radius: 0;
+  border-bottom: 0;
+  box-shadow: none;
+}
+[data-theme='light'] .header__logo img {
+  height: 72px;
+  mix-blend-mode: multiply;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.navlink {
+  position: relative;
+  color: var(--text-2);
+}
+.navlink:hover,
+.navlink.is-active {
+  color: var(--accent-text);
+}
+.navlink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+.navlink:hover::after,
+.navlink.is-active::after {
+  transform: scaleX(1);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__icon-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.header__icon-btn:hover {
+  border-color: var(--gold);
+  color: var(--accent-text);
+}
+.header__burger,
+.header__wa {
+  display: none;
+}
+.header__wa {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--gold);
+  color: #0a0a0b;
+  align-items: center;
+  justify-content: center;
+}
+.header__wa:hover {
+  color: #0a0a0b;
+}
+
+/* Menu mobile */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px 26px;
+  border-top: 1px solid var(--line-soft);
+  background: var(--bg);
+  animation: drop 0.3s ease both;
+  max-height: calc(100vh - 68px);
+  overflow-y: auto;
+}
+.mobile-menu__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.mobile-menu__link span {
+  color: var(--accent-text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+}
+.mobile-menu__cta {
+  margin-top: 22px;
+  border-radius: 14px;
+}
+
+@media (max-width: 1100px) {
+  .header__nav {
+    gap: 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__nav,
+  .header__cta {
+    display: none;
+  }
+  .header__burger,
+  .header__wa {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__bar {
+    height: 68px;
+    padding: 0 16px;
+  }
+  .header__logo {
+    padding: 7px 12px 9px;
+    border-radius: 0 0 12px 12px;
+  }
+  .header__logo img {
+    height: 58px;
+  }
+  [data-theme='light'] .header__logo img {
+    height: 54px;
+  }
+  .header__actions {
+    gap: 8px;
+  }
+  .header__icon-btn {
+    width: 46px;
+    height: 46px;
+  }
+}
