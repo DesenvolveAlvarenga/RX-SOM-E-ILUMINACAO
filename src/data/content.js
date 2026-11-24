@@ -11,9 +11,9 @@
 export const contact = {
   // Número com DDI + DDD, só dígitos. Ex.: 5514999998888
   whatsapp: '5518997952271',
-  whatsappLabel: '[(18) 99795-2271]',
-  instagram: '[rx_som_iluminacao]',
-  email: '[contato@seudominio.com.br]',
+  whatsappLabel: '(18) 99795-2271',
+  instagram: 'rx_som_iluminacao',
+  email: 'contato@seudominio.com.br',
   region: 'Palmital-SP e região',
 };
 
