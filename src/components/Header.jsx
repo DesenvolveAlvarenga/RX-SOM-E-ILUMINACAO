@@ -77,9 +77,6 @@ export default function Header({ theme, onToggleTheme }) {
             <Icon name="whatsapp" size={18} strokeWidth={2} />
             Solicitar orçamento
           </a>
-          <a className="header__wa" href={wa} aria-label="Orçamento pelo WhatsApp" {...externalProps(wa)}>
-            <Icon name="whatsapp" size={20} strokeWidth={2} />
-          </a>
           <button
             type="button"
             className="header__icon-btn header__burger"

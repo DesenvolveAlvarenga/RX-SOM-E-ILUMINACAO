@@ -108,21 +108,8 @@
   border-color: var(--gold);
   color: var(--accent-text);
 }
-.header__burger,
-.header__wa {
+.header__burger {
   display: none;
-}
-.header__wa {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  background: var(--gold);
-  color: #0a0a0b;
-  align-items: center;
-  justify-content: center;
-}
-.header__wa:hover {
-  color: #0a0a0b;
 }
 
 /* Menu mobile */
@@ -171,8 +158,7 @@
   .header__cta {
     display: none;
   }
-  .header__burger,
-  .header__wa {
+  .header__burger {
     display: inline-flex;
   }
 }
