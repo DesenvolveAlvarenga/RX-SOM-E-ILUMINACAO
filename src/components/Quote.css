@@ -163,7 +163,8 @@ a.quote__contact:hover .quote__contact-icon {
     display: none;
   }
   .quote__title {
-    font-size: 48px;
+    font-size: clamp(38px, 12.5vw, 48px);
+    overflow-wrap: break-word;
     margin-bottom: 14px;
   }
   .quote__lead {

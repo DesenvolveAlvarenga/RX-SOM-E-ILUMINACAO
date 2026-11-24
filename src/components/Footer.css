@@ -36,15 +36,22 @@
 .footer__logo img {
   height: 104px;
   width: auto;
+  max-width: none;
+}
+.footer__logo .logo-on-light {
+  display: none;
 }
 [data-theme='light'] .footer__logo {
   background: transparent;
   padding: 0;
   margin-bottom: 20px;
 }
-[data-theme='light'] .footer__logo img {
+[data-theme='light'] .footer__logo .logo-on-dark {
+  display: none;
+}
+[data-theme='light'] .footer__logo .logo-on-light {
+  display: block;
   height: 110px;
-  mix-blend-mode: multiply;
 }
 
 .footer__col {
@@ -121,7 +128,7 @@
   .footer__logo img {
     height: 86px;
   }
-  [data-theme='light'] .footer__logo img {
+  [data-theme='light'] .footer__logo .logo-on-light {
     height: 90px;
   }
   .footer__col {

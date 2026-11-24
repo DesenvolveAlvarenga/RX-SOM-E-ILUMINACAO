@@ -48,7 +48,11 @@ export default function Header({ theme, onToggleTheme }) {
     <header className={`header ${scrolled ? 'is-scrolled' : ''} ${open ? 'is-open' : ''}`}>
       <div className="container header__bar">
         <a href="#inicio" className="header__logo" aria-label="RX Som e Iluminação — início" onClick={close}>
-          <img src="/logo-rx.png" alt="RX Som e Iluminação" width="996" height="632" />
+          {isLight ? (
+            <img src="/logo-rx-transparente.png" alt="RX Som e Iluminação" width="996" height="632" />
+          ) : (
+            <img src="/logo-rx.png" alt="RX Som e Iluminação" width="996" height="632" />
+          )}
         </a>
 
         <nav className="header__nav" aria-label="Principal">

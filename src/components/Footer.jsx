@@ -14,7 +14,8 @@ export default function Footer() {
       <div className="container footer__grid">
         <div className="footer__brand">
           <div className="footer__logo">
-            <img src="/logo-rx.png" alt="RX Som e Iluminação" width="996" height="632" loading="lazy" />
+            <img className="logo-on-dark" src="/logo-rx.png" alt="RX Som e Iluminação" width="996" height="632" loading="lazy" />
+            <img className="logo-on-light" src="/logo-rx-transparente.png" alt="RX Som e Iluminação" width="996" height="632" loading="lazy" />
           </div>
           <p>Som, iluminação cênica e painel de LED para eventos em Palmital-SP e região.</p>
         </div>

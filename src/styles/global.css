@@ -82,6 +82,9 @@
 }
 
 html {
+  /* corta qualquer sobra lateral sem quebrar o cabeçalho fixo (iOS ignora hidden no body) */
+  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
@@ -92,7 +95,9 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   transition: background-color 0.35s ease, color 0.35s ease;
 }
 
@@ -161,6 +166,7 @@ button {
   font-size: clamp(44px, 5vw, 72px);
   line-height: 0.95;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 
 .lead {
@@ -415,7 +421,7 @@ textarea.input {
     padding: 72px 0;
   }
   .section-title {
-    font-size: 46px;
+    font-size: clamp(38px, 12vw, 46px);
   }
   .eyebrow {
     font-size: 11px;

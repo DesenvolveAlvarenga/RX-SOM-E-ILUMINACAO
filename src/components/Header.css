@@ -23,6 +23,7 @@
 /* Logo: no escuro fica numa placa marfim (o arquivo original tem fundo branco
    e o "RX" é preto); no claro aparece direto, sem alteração. */
 .header__logo {
+  flex: none;
   align-self: flex-start;
   display: flex;
   align-items: center;
@@ -37,6 +38,7 @@
 .header__logo img {
   height: 74px;
   width: auto;
+  max-width: none;
 }
 [data-theme='light'] .header__logo {
   align-self: center;
@@ -48,7 +50,6 @@
 }
 [data-theme='light'] .header__logo img {
   height: 72px;
-  mix-blend-mode: multiply;
 }
 
 .header__nav {
@@ -132,7 +133,7 @@
   border-top: 1px solid var(--line-soft);
   background: var(--bg);
   animation: drop 0.3s ease both;
-  max-height: calc(100vh - 68px);
+  max-height: calc(100vh - 72px);
   overflow-y: auto;
 }
 .mobile-menu__link {
@@ -178,18 +179,19 @@
 
 @media (max-width: 767px) {
   .header__bar {
-    height: 68px;
+    height: 72px;
     padding: 0 16px;
+    gap: 12px;
   }
   .header__logo {
-    padding: 7px 12px 9px;
+    padding: 6px 10px 8px;
     border-radius: 0 0 12px 12px;
   }
   .header__logo img {
-    height: 58px;
+    height: 66px;
   }
   [data-theme='light'] .header__logo img {
-    height: 54px;
+    height: 62px;
   }
   .header__actions {
     gap: 8px;
